@@ -1,0 +1,4 @@
+boto3
+joblib
+pandas
+scikit-learn

@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ml-consumer-deployment
+spec:
+  replicas: 1  
+  selector:
+    matchLabels:
+      app: ml-consumer
+  template:
+    metadata:
+      labels:
+        app: ml-consumer
+    spec:
+      containers:
+      - name: ml-consumer-container
+        image: 916789/ml-consumer:v1
+        env:
+        - name: AWS_ACCESS_KEY_ID
+          value: "PLACEHOLDER_KEY"
+        - name: AWS_SECRET_ACCESS_KEY
+          value: "PLACEHOLDER_SECRET"
+        - name: AWS_SESSION_TOKEN
+          value: "PLACEHOLDER_TOKEN"
+        - name: AWS_DEFAULT_REGION
+          value: "us-east-1"
+          
