@@ -1,1 +1,0 @@
-/home/ec2-user/airflow/dags/training_pipeline.py
